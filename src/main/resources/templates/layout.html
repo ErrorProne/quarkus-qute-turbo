@@ -1,0 +1,87 @@
+<!--
+=========================================================
+* Paper Dashboard 2 - v2.0.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/paper-dashboard-2
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Quarkus + Qute + Turbo
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+
+    <script src="/webjars/hotwired__turbo/dist/turbo.es2017-umd.js"></script>
+</head>
+
+<body class="">
+<div class="wrapper ">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="active ">
+                    <a href="/">
+                        <i class="nc-icon nc-bank"></i>
+                        <p>About</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/turbo">
+                        <i class="nc-icon nc-delivery-fast"></i>
+                        <p>Turbo</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/sse">
+                        <i class="nc-icon nc-send"></i>
+                        <p>Server Sent Events</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <div class="navbar-toggle">
+                        <button type="button" class="navbar-toggler">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                        </button>
+                    </div>
+                    <a class="navbar-brand" href="javascript:;">Quarkus + Qute + Turbo</a>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <section class="content">{#insert body}No body!{/}</section>
+    </div>
+</div>
+<script src="/webjars/jquery/dist/jquery.slim.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

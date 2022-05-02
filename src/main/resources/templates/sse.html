@@ -1,0 +1,35 @@
+{@qqte.InfoCardDto nameDto}
+{#include layout}
+  {#body}
+      <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              {#include cards/infoCard.html dto=nameDto /}
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <turbo-frame id='cpu-frame'>
+                Loading
+            </turbo-frame>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <turbo-frame id='mem-frame'>
+                Loading
+            </turbo-frame>
+          </div>
+      </div>
+      <script type="text/javascript">
+        if (window["EventSource"] && window["Turbo"]) {
+            for (const source of Turbo.session.streamObserver.sources.values()) {
+                console.debug("Closing existing event source", source);
+                source.close();
+                Turbo.disconnectStreamSource(source);
+            }
+            Turbo.connectStreamSource(new EventSource("/sse/cpu"));
+            Turbo.connectStreamSource(new EventSource("/sse/mem"));
+        } else {
+            console.warn("Turbo Streams over SSE not available");
+        }
+      </script>
+  {/body}
+{/include}

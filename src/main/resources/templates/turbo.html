@@ -1,0 +1,22 @@
+{@qqte.InfoCardDto nameDto}
+{#include layout}
+  {#body}
+      <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              {#include cards/infoCard.html dto=nameDto /}
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <turbo-frame id='cpu-frame' loading="lazy" src="/turbo/cpu">
+                Loading (delayed)
+            </turbo-frame>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <turbo-frame id='mem-frame' loading="lazy" src="/turbo/mem">
+                Loading
+            </turbo-frame>
+          </div>
+      </div>
+  {/body}
+{/include}

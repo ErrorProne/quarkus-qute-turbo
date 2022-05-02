@@ -1,0 +1,6 @@
+{@qqte.InfoCardDto dto}
+<turbo-stream action="replace" target="{dto.contentId}-frame">
+  <template>
+    {#include cards/infoCard.html dto=dto /}
+  </template>
+</turbo-stream>
